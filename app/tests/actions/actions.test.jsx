@@ -7,9 +7,9 @@ describe('Actions', () => {
       type: 'SET_SEARCH_TEXT',
       searchText: 'Some search Text'
     };
-    var response = actions.setSearchText(action.searchText);
+    var res = actions.setSearchText(action.searchText);
 
-    expect(response).toEqual(action);
+    expect(res).toEqual(action);
   });
 
   it('should generate add todo action', () => {
@@ -17,18 +17,18 @@ describe('Actions', () => {
       type: 'ADD_TODO',
       text: 'New todo item'
     };
-    var response = actions.addTodo(action.text);
+    var res = actions.addTodo(action.text);
 
-    expect(response).toEqual(action);
+    expect(res).toEqual(action);
   });
 
   it('should generate toggle show completed action', () => {
     var action = {
       type: 'TOGGLE_SHOW_COMPLETED'
     };
-    var response = actions.toggleShowCompleted();
+    var res = actions.toggleShowCompleted();
 
-    expect(response).toEqual(action);
+    expect(res).toEqual(action);
   });
 
   it('should generate toggle todo action', () => {
@@ -36,8 +36,8 @@ describe('Actions', () => {
       type: 'TOGGLE_TODO',
       id: 23
     };
-    var response = actions.toggleTodo(action.id);
+    var res = actions.toggleTodo(action.id);
 
-    expect(response).toEqual(action);
+    expect(res).toEqual(action);
   });
 });
