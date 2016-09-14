@@ -42,7 +42,7 @@ module.exports = {
     // should search on the basis of searchText
     if (searchText != '') {
       filteredTodos = filteredTodos.filter((todo) => {
-        return todo.text.toLowerCase().indexOf(searchText) >= 0;
+        return todo.text.toLowerCase().indexOf(searchText.toLowerCase()) >= 0;
       });
     }
 

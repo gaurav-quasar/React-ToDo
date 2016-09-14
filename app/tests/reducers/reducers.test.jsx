@@ -41,6 +41,33 @@ describe('Reducers', () => {
       expect(res[0].text).toEqual(action.text);
     });
 
+    it('should add new todo', () => {
+      var todos= [{
+        id: 1,
+        text: 'Test1',
+        isCompleted: false,
+        completedAt: undefined,
+        createdAt: 200
+      },
+      {
+        id: 2,
+        text: 'Test2',
+        isCompleted: false,
+        completedAt: undefined,
+        createdAt: 300
+      }];
+
+      var action = {
+        type: 'ADD_TODOS',
+        todos
+      };
+
+      var res = reducers.todosReducer(df([]), df(action));
+
+      expect(res.length).toEqual(2);
+      expect(res[0]).toEqual(todos[0]);
+    });
+
     it('should toggle todo', () => {
       var todos = [{
         id: '123',
