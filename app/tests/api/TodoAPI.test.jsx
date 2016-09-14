@@ -3,7 +3,7 @@ var expect = require('expect');
 var TodoAPI = require('TodoAPI');
 
 describe('TodoAPI', () => {
-  afterEach(() => {
+  beforeEach(() => {
     localStorage.removeItem('todos');
   });
 
